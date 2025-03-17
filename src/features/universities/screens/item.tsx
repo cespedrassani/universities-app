@@ -23,7 +23,7 @@ export const UniversityItem: React.FC<UniversityItemProps> = ({ item, index, pag
 
   return (
     <AnimatedTouchable
-      className="flex-1 m-1.5 bg-primary-foreground rounded-lg shadow-sm shadow-slate-200 elevation-sm"
+      className="flex-1 m-1.5 bg-primary-foreground rounded-lg shadow-sm shadow-slate-200 elevation-md"
       entering={FadeInDown.delay(animationIndex * 100).springify()}
       onPress={() => onPress(item)}
     >
