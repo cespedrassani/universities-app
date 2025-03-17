@@ -5,10 +5,10 @@ O Universities App é uma aplicação móvel desenvolvida com React Native e Exp
 ## 📱 Demonstração do App
 
 ### Android
-[![Universities App Demo - Android](https://img.youtube.com/vi/SEU_VIDEO_ID_ANDROID/0.jpg)](https://www.youtube.com/watch?v=SEU_VIDEO_ID_ANDROID)
+[![Demo - Android](https://cdn-icons-png.flaticon.com/512/174/174836.png)](https://drive.google.com/file/d/1Cvlc7avb65vSigCP4gNQZamthUyrA66A/view?usp=sharing)
 
 ### iOS
-[![Universities App Demo - iOS](https://img.youtube.com/vi/SEU_VIDEO_ID_IOS/0.jpg)](https://www.youtube.com/watch?v=SEU_VIDEO_ID_IOS)
+[![Demo - iOS](https://img.icons8.com/ios11/512/mac-os.png)](https://drive.google.com/file/d/1vM-4fEiGEtrg1hAE_SYi0kAf6oa6zB2b/view?usp=drive_link)
 
 ## 📋 Funcionalidades
 
