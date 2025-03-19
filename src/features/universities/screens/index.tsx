@@ -15,13 +15,10 @@ import UniversityDetail from './detail';
 import { University } from '../types/university';
 import BottomSheet, { BottomSheetBackdrop, BottomSheetBackdropProps } from '@gorhom/bottom-sheet';
 import { Icon } from '@/components/icons/Icon';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { cn } from '@/utils/cn';
 
 const UniversitiesScreen = () => {
   const bottomSheetRef = useRef<BottomSheet>(null);
   const flatListRef = useRef<FlatList>(null);
-  const insets = useSafeAreaInsets();
 
   const [selectedItem, setSelectedItem] = useState<University | null>(null);
   const [isOpen, setIsOpen] = useState(false);

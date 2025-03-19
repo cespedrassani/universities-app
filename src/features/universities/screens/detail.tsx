@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Linking, ScrollView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { University } from '../types/university';
 import { Icon } from '@/components/icons/Icon';
 import * as Clipboard from 'expo-clipboard';

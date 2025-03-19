@@ -2,7 +2,6 @@ import { University } from '@/features/universities/types/university';
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
-import UniversityDetail from './detail';
 import { Icon } from '@/components/icons/Icon';
 
 const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
