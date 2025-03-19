@@ -16,14 +16,14 @@ const PopoverContent = React.forwardRef<
   return (
     <PopoverPrimitive.Portal hostName={portalHost}>
       <PopoverPrimitive.Overlay style={StyleSheet.absoluteFill}>
-        <Animated.View entering={FadeIn.duration(200)} exiting={FadeOut}>
+        <Animated.View entering={FadeIn.duration(200)} exiting={FadeOut.duration(100)}>
           <TextClassContext.Provider value='text-popover-foreground'>
             <PopoverPrimitive.Content
               ref={ref}
               align={align}
               sideOffset={sideOffset}
               className={cn(
-                'z-50 w-auto rounded-md bg-popover p-4 shadow-sm shadow-slate-300',
+                'z-50 w-auto rounded-md bg-popover p-4 shadow-sm shadow-slate-300 elevation-md',
                 className
               )}
               {...props}

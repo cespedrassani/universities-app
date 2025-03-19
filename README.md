@@ -1,50 +1,113 @@
-# Welcome to your Expo app 👋
+# Universities App 🎓
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+O Universities App é uma aplicação móvel desenvolvida com React Native e Expo que permite aos usuários pesquisar universidades ao redor do mundo. Com uma interface amigável e intuitiva, os usuários podem filtrar universidades por país e visualizar detalhes como nome, site e país de origem.
 
-## Get started
+## 📱 Demonstração do App
 
-1. Install dependencies
+### Android
+<a href="https://drive.google.com/file/d/1Cvlc7avb65vSigCP4gNQZamthUyrA66A/view?usp=sharing">
+  <img src="https://cdn-icons-png.flaticon.com/512/174/174836.png" width="60" alt="Demo - Android"/>
+</a>
 
-   ```bash
-   npm install
-   ```
+### iOS
+<a href="https://drive.google.com/file/d/1vM-4fEiGEtrg1hAE_SYi0kAf6oa6zB2b/view?usp=drive_link">
+  <img src="https://img.icons8.com/ios11/512/mac-os.png" width="60" alt="Demo - iOS"/>
+</a>
 
-2. Start the app
+## 📋 Funcionalidades
 
-   ```bash
-    npx expo start
-   ```
+- Pesquisa de universidades por país
+- Visualização de detalhes das universidades
+- Interface de usuário intuitiva e responsiva
+- Navegação entre telas
+- Integração com API pública de universidades
 
-In the output, you'll find options to open the app in a
+## 🚀 Tecnologias Utilizadas
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- React Native
+- Expo
+- TypeScript
+- React Navigation
+- Context API
+- Axios
+- React Native Paper
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## ⚙️ Requisitos
 
-## Get a fresh project
+- Node.js (v18 ou superior)
+- NPM ou Yarn
+- Expo CLI (```npx expo -h```)
+- Um dispositivo móvel ou emulador para testar
+- API universities-api (https://github.com/cespedrassani/universities-api)
 
-When you're ready, run:
+## 🔧 Como Instalar e Executar
+
+Siga estes passos para configurar o ambiente e executar o aplicativo localmente:
+
+### 1. Clone o repositório
 
 ```bash
-npm run reset-project
+git clone https://github.com/cespedrassani/universities-app.git
+cd universities-app
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2. Instale as dependências
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 3. Configure o arquivo de ambiente
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Altere o arquivo `.env` na raiz do projeto para configurar a conexão com a API:
 
-## Join the community
+```
+EXPO_PUBLIC_API_URL=http://SEU_ENDERECO_IP:3000
+```
 
-Join our community of developers creating universal apps.
+Substitua `SEU_ENDERECO_IP` pelo endereço IP da sua máquina na rede local.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+> **Importante:** Ao usar o aplicativo em dispositivos físicos e emuladores, você precisa usar o IP da sua máquina na rede local (não use localhost ou 127.0.0.1). Se usar localhost o dispositivo não vai encontrar a api na rede, já que para ele localhost é ele mesmo.
+
+Para descobrir seu endereço IP:
+- No Windows: Execute `ipconfig` no prompt de comando
+- No macOS/Linux: Execute `ifconfig` ou `ip addr show` no terminal
+
+### 4. Inicie o servidor de desenvolvimento
+
+```bash
+npx expo start
+```
+
+### 5. Execute o aplicativo
+
+Após iniciar o servidor de desenvolvimento, você verá um QR code no terminal
+
+Para testar o aplicativo, você pode:
+
+- Escanear o QR code e abra o aplicativo com Expo Go (disponível na App Store ou Google Play) em seu dispositivo móvel
+- Pressionar `a` no terminal para abrir o aplicativo em um emulador Android (se configurado)
+- Pressionar `i` no terminal para abrir o aplicativo em um emulador iOS (se estiver usando macOS e tiver o Xcode instalado)
+
+## 🌐 Configuração da API
+
+### Utilizando a API Local
+
+Se você deseja executar o aplicativo com a API Node.js local:
+
+1. Certifique-se de que a API Node.js está rodando na sua máquina
+2. Obtenha o endereço IP da sua máquina na rede local
+3. Configure o arquivo `.env` na raiz do projeto como descrito anteriormente:
+   ```
+   EXPO_PUBLIC_API_URL=http://SEU_ENDERECO_IP:3000
+   ```
+4. A aplicação usará automaticamente este endereço para fazer as requisições
+
+### Resolução de Problemas de Conexão
+
+Se o aplicativo não conseguir se conectar à API, verifique:
+
+- Se o endereço IP no arquivo `.env` está correto
+- Se a API está rodando e acessível (teste abrindo o endereço em um navegador e adicionando /api ao final dele, se estiver online deverá aparecer a documentação do swagger)
+- Se não há firewall bloqueando a conexão
+- Se o dispositivo ou emulador está na mesma rede que a máquina rodando a API

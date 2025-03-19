@@ -91,7 +91,7 @@ const UniversityDetail = ({ university, onClose }: UniversityDetailProps) => {
                             <Icon name='Copy' className='text-primary' size={14} />
                           </TouchableOpacity>
                         </PopoverTrigger>
-                        <PopoverContent className="bg-foreground">
+                        <PopoverContent className="bg-primary-foreground">
                           <Text className='text-xs text-primary'>Copiado!</Text>
                         </PopoverContent>
                       </Popover>
